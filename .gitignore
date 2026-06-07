@@ -1,0 +1,9 @@
+*-check.png
+*-screenshot.png
+desktop-align-*.png
+mobile-align-*.png
+reference-match-*.png
+Приложение пользователя.png
+node_modules/
+package.json
+package-lock.json
