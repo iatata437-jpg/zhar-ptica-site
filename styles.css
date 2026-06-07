@@ -1044,9 +1044,9 @@ main {
     right: 0;
     z-index: 30;
     display: grid;
-    width: min(100% - 16px, 360px);
+    width: min(100% - 34px, 330px);
     margin: 0 auto;
-    padding: 18px 34px 16px;
+    padding: 14px 28px 13px;
     pointer-events: none;
     background: #fff;
     border-radius: 10px;
@@ -1066,18 +1066,18 @@ main {
   .mobile-nav-panel span {
     display: flex;
     align-items: center;
-    min-height: 58px;
+    min-height: 42px;
     color: #000;
     border-bottom: 1px solid var(--orange);
-    font-size: 24px;
+    font-size: 17px;
     line-height: 1;
   }
 
   .mobile-nav-panel .mobile-nav-phone,
   .mobile-nav-panel .mobile-nav-time {
-    gap: 16px;
+    gap: 13px;
     color: var(--orange);
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .mobile-nav-panel .mobile-nav-time {
@@ -1087,8 +1087,8 @@ main {
   .mobile-nav-panel .mobile-nav-phone::before,
   .mobile-nav-panel .mobile-nav-time::before {
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     flex: 0 0 auto;
     background: var(--orange);
     content: "";
