@@ -1491,3 +1491,88 @@ main {
     text-decoration: underline;
   }
 }
+
+@media (max-width: 760px) {
+  :root {
+    --m-title: 22px;
+    --m-section-title: 18px;
+    --m-body: 14px;
+    --m-small: 12px;
+    --m-button: 11px;
+  }
+
+  body {
+    font-size: var(--m-body);
+    line-height: 1.45;
+  }
+
+  .hero h1 {
+    font-size: var(--m-title);
+  }
+
+  .section h2,
+  .products h2,
+  .workflow h2,
+  .order-form h2,
+  .footer h3 {
+    font-size: var(--m-section-title);
+  }
+
+  .hero-list,
+  .about-card,
+  .advantage-grid span,
+  .product-card h3,
+  .product-card p,
+  .price,
+  .workflow-grid h3,
+  .order-form span,
+  .order-form input,
+  .order-form p,
+  .order-form a,
+  .footer p,
+  .footer a,
+  .footer small,
+  .footer-about p,
+  .footer-about small {
+    font-size: var(--m-small);
+  }
+
+  .footer p,
+  .footer a,
+  .footer small,
+  .footer-about p,
+  .footer-about small {
+    font-size: var(--m-body);
+  }
+
+  .btn,
+  .product-card button,
+  .order-form button {
+    font-size: var(--m-button);
+  }
+
+  .advantages h2 {
+    font-size: var(--m-small);
+  }
+
+  .advantage-grid strong {
+    font-size: 22px;
+  }
+
+  .product-card {
+    flex-basis: 165px;
+  }
+
+  .product-visual {
+    height: 76px;
+  }
+
+  .workflow-grid {
+    gap: 13px;
+  }
+
+  .footer-contact p,
+  .footer-contact a {
+    padding-left: 50px;
+  }
+}
