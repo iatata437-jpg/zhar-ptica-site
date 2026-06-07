@@ -3,6 +3,9 @@
 desktop-align-*.png
 mobile-align-*.png
 reference-match-*.png
+android-*.png
+mobile-*-before.png
+mobile-*-after-fix.png
 Приложение пользователя.png
 node_modules/
 package.json
