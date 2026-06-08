@@ -1912,7 +1912,7 @@ body.modal-open {
     height: 38px;
     padding: 0 12px;
     border-radius: 7px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .modal-form button {
@@ -1920,5 +1920,16 @@ body.modal-open {
     margin-top: 2px;
     border-radius: 7px;
     font-size: 12px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .order-form input,
+  .modal-form input {
+    font-size: 16px;
   }
 }
