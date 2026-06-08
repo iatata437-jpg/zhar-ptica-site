@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260608-input-zoom-fix">
+  <link rel="stylesheet" href="styles.css?v=20260608-drawer-menu">
 </head>
 <body>
   <header class="header">
@@ -40,6 +40,8 @@
         </button>
       </div>
       <div class="mobile-nav-panel" aria-hidden="true">
+        <button class="mobile-nav-backdrop" type="button" aria-label="Закрыть меню"></button>
+        <div class="mobile-nav-drawer">
         <a href="#top">Главная</a>
         <a href="#about">О компании</a>
         <a href="#products">Продукция</a>
@@ -47,6 +49,7 @@
         <a href="#contacts">Контакты</a>
         <a class="mobile-nav-phone" href="tel:+996703181771">+996 703 181 771</a>
         <span class="mobile-nav-time">Пн-Сб: 08:00-18:00</span>
+        </div>
       </div>
     </div>
   </header>
@@ -245,6 +248,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260608-modal-mobile"></script>
+  <script src="script.js?v=20260608-drawer-menu"></script>
 </body>
 </html>

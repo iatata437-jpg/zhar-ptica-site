@@ -4,6 +4,7 @@ const menuPanel = document.querySelector(".mobile-nav-panel");
 const modal = document.querySelector("#order-modal");
 const modalForm = document.querySelector(".modal-form");
 const modalTriggers = document.querySelectorAll(".js-open-order-modal");
+const mobileNavBackdrop = document.querySelector(".mobile-nav-backdrop");
 
 const closeMobileMenu = () => {
   document.body.classList.remove("menu-open");
@@ -34,6 +35,8 @@ menuButton?.addEventListener("click", () => {
 menuPanel?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMobileMenu);
 });
+
+mobileNavBackdrop?.addEventListener("click", closeMobileMenu);
 
 modalTriggers.forEach((trigger) => {
   trigger.addEventListener("click", (event) => {
