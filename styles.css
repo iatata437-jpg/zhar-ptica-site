@@ -2011,11 +2011,62 @@ body.modal-open {
     position: relative;
     width: min(74vw, 290px);
     min-height: 100dvh;
-    padding: 30px 28px;
+    padding: 58px 28px 30px;
     background: #fff;
     box-shadow: 18px 0 42px rgba(0, 0, 0, 0.2);
     transform: translateX(-104%);
     transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-drawer-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    padding: 0;
+    color: var(--orange);
+    background: #fff7ef;
+    border: 1px solid rgba(223, 107, 22, 0.32);
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(137, 69, 19, 0.12);
+    cursor: pointer;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.72);
+    transition:
+      opacity 0.22s ease 0.08s,
+      transform 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.08s,
+      background 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  .mobile-drawer-close span {
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+  }
+
+  .mobile-drawer-close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .mobile-drawer-close span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .menu-open .mobile-drawer-close {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  .mobile-drawer-close:active {
+    transform: rotate(0deg) scale(0.92);
+    background: #ffe9d7;
+    box-shadow: 0 4px 10px rgba(137, 69, 19, 0.12);
   }
 
   .menu-open .mobile-nav-panel {
@@ -2063,11 +2114,50 @@ body.modal-open {
 
   .mobile-nav-drawer {
     margin-left: auto;
+    padding-top: 58px;
     box-shadow: -18px 0 42px rgba(0, 0, 0, 0.2);
     transform: translateX(104%);
   }
 
   .menu-open .mobile-nav-drawer {
     transform: translateX(0);
+  }
+
+  .mobile-nav-panel .mobile-drawer-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    place-items: center;
+    padding: 0;
+    color: var(--orange);
+    background: #fff7ef;
+    border: 1px solid rgba(223, 107, 22, 0.32);
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(137, 69, 19, 0.12);
+    cursor: pointer;
+  }
+
+  .mobile-nav-panel .mobile-drawer-close span {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 2px;
+    min-height: 0;
+    padding: 0;
+    background: currentColor;
+    border: 0;
+    border-radius: 999px;
+  }
+
+  .mobile-nav-panel .mobile-drawer-close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .mobile-nav-panel .mobile-drawer-close span:last-child {
+    transform: rotate(-45deg);
   }
 }
