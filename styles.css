@@ -674,6 +674,150 @@ main {
   content: "◷";
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 14, 8, 0.48);
+  backdrop-filter: blur(6px);
+}
+
+.modal-dialog {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 30px;
+  width: min(760px, 100%);
+  padding: 38px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(235, 162, 21, 0.16), transparent 30%),
+    linear-gradient(135deg, #fffaf5, #ffffff 52%, #fff6ec);
+  border: 1px solid #f0d1bd;
+  border-radius: 18px;
+  box-shadow: 0 28px 70px rgba(49, 27, 10, 0.28);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.2s ease;
+}
+
+.modal.is-open .modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--orange);
+  background: #fff4e8;
+  border: 1px solid #f2cfb8;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.modal-copy {
+  align-self: center;
+  padding-right: 8px;
+}
+
+.modal-copy p {
+  margin: 0 0 12px;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modal-copy h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 31px;
+  line-height: 1.18;
+}
+
+.modal-copy span {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.modal-form {
+  display: grid;
+  gap: 14px;
+}
+
+.modal-form label {
+  display: block;
+}
+
+.modal-form span {
+  display: block;
+  margin-bottom: 7px;
+  color: #2f2924;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modal-form input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #f0c6aa;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.modal-form input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(223, 107, 22, 0.12);
+}
+
+.modal-form button {
+  min-height: 48px;
+  margin-top: 4px;
+  color: #fff;
+  background: linear-gradient(90deg, #cf5635, var(--gold));
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 @media (max-width: 1180px) {
   .header-inner,
   .hero,
@@ -1561,6 +1705,54 @@ main {
 
   .footer-about small span {
     text-decoration: underline;
+  }
+
+  .modal {
+    padding: 16px;
+  }
+
+  .modal-dialog {
+    display: block;
+    width: min(100%, 360px);
+    padding: 28px 20px 22px;
+    border-radius: 14px;
+  }
+
+  .modal-copy {
+    padding-right: 36px;
+    margin-bottom: 18px;
+  }
+
+  .modal-copy p {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .modal-copy h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .modal-copy span {
+    font-size: 12px;
+  }
+
+  .modal-form {
+    gap: 11px;
+  }
+
+  .modal-form span {
+    font-size: 12px;
+  }
+
+  .modal-form input {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .modal-form button {
+    min-height: 41px;
+    font-size: 12px;
   }
 }
 

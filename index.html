@@ -61,7 +61,7 @@
           <li class="icon-delivery">Доставка по всему Кыргызстану</li>
         </ul>
         <div class="hero-actions">
-          <a class="btn btn-fill" href="#contacts">Оформить заказ</a>
+          <a class="btn btn-fill js-open-order-modal" href="#order-modal">Оформить заказ</a>
           <a class="btn btn-outline" href="#contacts">Получить консультацию</a>
         </div>
       </div>
@@ -101,7 +101,7 @@
           <h3>Яйцо куриное C0 (Отборное)</h3>
           <p>Крупные свежие яйца</p>
           <div class="price"><span>Упаковка: 10/30 шт.</span><b>140сом/10 шт.</b></div>
-          <button type="button">Заказать</button>
+          <button class="js-open-order-modal" type="button">Заказать</button>
         </article>
         <article class="product-card">
           <div class="product-visual">
@@ -110,7 +110,7 @@
           <h3>Яйцо куриное C1 (Среднее)</h3>
           <p>Средние универсальные яйца</p>
           <div class="price"><span>Упаковка: 10/30 шт.</span><b>120сом/10 шт.</b></div>
-          <button type="button">Заказать</button>
+          <button class="js-open-order-modal" type="button">Заказать</button>
         </article>
         <article class="product-card">
           <div class="product-visual">
@@ -119,7 +119,7 @@
           <h3>Яйцо куриное C2 (Эконом)</h3>
           <p>Выгодная цена</p>
           <div class="price"><span>Упаковка: 10/30 шт.</span><b>95сом/10 шт.</b></div>
-          <button type="button">Заказать</button>
+          <button class="js-open-order-modal" type="button">Заказать</button>
         </article>
       </div>
     </section>
@@ -212,6 +212,39 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260608-menu-compact"></script>
+  <div class="modal" id="order-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+      <button class="modal-close" type="button" aria-label="Закрыть" data-modal-close>
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="modal-copy">
+        <p>Заявка на поставку</p>
+        <h2 id="order-modal-title">Заполните данные для заказа яиц</h2>
+        <span>Мы свяжемся с вами, уточним категорию, объем партии и удобное время доставки.</span>
+      </div>
+      <form class="modal-form">
+        <label>
+          <span>Имя контактного лица</span>
+          <input name="person" type="text" placeholder="Например, Айбек" required>
+        </label>
+        <label>
+          <span>Наименование организации</span>
+          <input name="organization" type="text" placeholder="Название компании">
+        </label>
+        <label>
+          <span>Номер телефона</span>
+          <input name="phone" type="tel" placeholder="+996 ___ ___ ___" required>
+        </label>
+        <label>
+          <span>Электронная почта</span>
+          <input name="email" type="email" placeholder="example@mail.com" required>
+        </label>
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260608-modal"></script>
 </body>
 </html>
