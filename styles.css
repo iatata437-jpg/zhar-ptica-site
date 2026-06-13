@@ -221,8 +221,9 @@ main {
 .hero-bowl {
   justify-self: end;
   width: 456px;
-  aspect-ratio: 1;
+  height: 620px;
   object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   mix-blend-mode: multiply;
   filter: drop-shadow(0 30px 30px rgba(93, 45, 7, 0.18));
@@ -1529,7 +1530,7 @@ body.modal-open {
     overflow: hidden;
     background:
       linear-gradient(90deg, rgba(255,255,255,0.96) 0 54%, rgba(255,255,255,0.72) 70%, rgba(255,255,255,0.42)),
-      url("assets/hero-bowl.webp") right center / 178px auto no-repeat,
+      url("assets/hero-bowl-photo.webp") right center / 178px auto no-repeat,
       #fffdf8;
   }
 
